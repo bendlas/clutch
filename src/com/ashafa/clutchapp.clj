@@ -55,9 +55,10 @@
 
 (declare ^:dynamic *lang-ext*)
 
-(def #^{:doc "Bindable var to control whether design documents are overwritten
-              when pushing. If false (it's true by default), and a design document
-              already exists, the push fns will become no-ops (logging that fact)."}
+(def ^{:doc "Bindable var to control whether design documents are overwritten
+             when pushing. If false (it's true by default), and a design document
+             already exists, the push fns will become no-ops (logging that fact)."
+       :dynamic true}
   *push-overwrite?* true)
 
 (defn- load-files
